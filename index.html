@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,18 +6,18 @@
 <style>
 
 body {
-  min-height: 100vh;
+  //min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .card {
-  width: 80%;
+  width: 100%;
   max-width: 700px;
 }
 .card-body {
-  padding: 40px;
+  padding: 10px;
 }
 
 
@@ -35,9 +36,9 @@ body {
       </footer>
     </blockquote>
   </div>
-  <div class="card-footer">
+  <!--div class="card-footer">
     <button class="btn btn-primary">New Quote</div>
-  </div>
+  </div-->
 </div>
 
 
@@ -54,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector("button");
   const quote = document.querySelector("blockquote p");
   const cite = document.querySelector("blockquote cite");
+  const blockquote = document.querySelector("blockquote");
 
   async function updateQuote() {
     // Fetch a random quote from the Quotable API
@@ -70,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Attach an event listener to the `button`
-  button.addEventListener("click", updateQuote);
+  blockquote.addEventListener("click", updateQuote);
 
   // call updateQuote once when page loads
   updateQuote();
